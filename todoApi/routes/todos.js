@@ -38,7 +38,7 @@ router.put('/:id',function(req,res,next){
 });
 
 //Delete todo
-router.delete(":_id",(req,res,next)=>{
+router.delete("/:id",(req,res,next)=>{
     const id = req.params.id;
     todo.findByIdAndRemove(id)
     .then(() => {
